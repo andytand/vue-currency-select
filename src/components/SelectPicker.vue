@@ -1,18 +1,17 @@
 <template>
-  <label>
-    {{ pickerLabel }}
-    <select>
-      <option value="Testing">Testing</option>
-      <option value="Only">Only</option>
-    </select>
-  </label>
+  <v-select :options="options"></v-select>
 </template>
 
 <script>
+import vSelect from "vue-select";
+
 export default {
   name: "SelectPicker",
+  components: {
+    vSelect
+  },
   props: {
-    pickerLabel: String
+    options: Array
   }
 };
 </script>

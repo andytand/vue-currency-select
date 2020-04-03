@@ -1,19 +1,25 @@
 <template>
   <div id="app">
-    <select-picker :picker-label="pickerLabel"></select-picker>
+    <select-picker-label :picker-label="pickerLabel">
+      <select-picker :options="options"></select-picker>
+    </select-picker-label>
   </div>
 </template>
 
 <script>
 import SelectPicker from "@components/SelectPicker";
+import SelectPickerLabel from "@components/SelectPickerLabel";
+import "./styles/global.scss";
 
 export default {
   name: "CurrencySelect",
   components: {
-    SelectPicker
+    SelectPicker,
+    SelectPickerLabel
   },
   props: {
-    pickerLabel: String
+    pickerLabel: String,
+    options: Array
   }
 };
 </script>
