@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <select-picker :picker-label="pickerLabel"></select-picker>
   </div>
 </template>
 
 <script>
-import HelloWorld from "@components/HelloWorld.vue";
+import SelectPicker from "@components/SelectPicker";
 
 export default {
-  name: "App",
+  name: "CurrencySelect",
   components: {
-    HelloWorld
+    SelectPicker
+  },
+  props: {
+    pickerLabel: String
   }
 };
 </script>

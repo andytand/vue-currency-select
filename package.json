@@ -1,7 +1,15 @@
 {
   "name": "currency-select",
   "version": "0.1.0",
-  "private": true,
+  "description": "Reusable currency-select dropdown component, based on transferwise/tw-currency-select",
+  "private": false,
+  "main": "./src/index.js",
+  "author": {
+    "email": "andytan0727@gmail.com",
+    "name": "Andy Tan",
+    "url": "https://github.com/andytan0727"
+  },
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -24,5 +32,9 @@
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
 }

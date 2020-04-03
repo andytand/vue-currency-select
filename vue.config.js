@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   configureWebpack: {
     resolve: {
-      extensions: [".js", ".json", ".vue"],
+      extensions: [".vue"],
       alias: {
         "@components": path.resolve(__dirname, "src/components")
       }
