@@ -1,5 +1,5 @@
 <template>
-  <v-select :options="options"></v-select>
+  <v-select label="currency" :options="options"></v-select>
 </template>
 
 <script>

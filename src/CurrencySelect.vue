@@ -9,6 +9,7 @@
 <script>
 import SelectPicker from "@components/SelectPicker";
 import SelectPickerLabel from "@components/SelectPickerLabel";
+import { generateCurrencyCountryMap } from "@/utils/currencyCountryMap";
 import "./styles/global.scss";
 
 export default {
@@ -19,7 +20,10 @@ export default {
   },
   props: {
     pickerLabel: String,
-    options: Array
+    options: {
+      type: Array,
+      default: generateCurrencyCountryMap
+    }
   }
 };
 </script>
