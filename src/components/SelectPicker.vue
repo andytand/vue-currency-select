@@ -1,18 +1,28 @@
 <template>
-  <v-select
-    class="v-select-custom-styles"
-    label="currency"
-    :options="options"
-  ></v-select>
+  <v-select class="v-select-custom-styles" label="currency" :options="options">
+    <template #option="{ currency }">
+      <select-option :currency="currency" />
+    </template>
+
+    <template #selected-option="{ currency }">
+      <select-option :currency="currency" />
+    </template>
+
+    <template #no-options>
+      <span style="color: darkgray">No results</span>
+    </template>
+  </v-select>
 </template>
 
 <script>
 import vSelect from "vue-select";
+import SelectOption from "@components/SelectOption";
 
 export default {
   name: "SelectPicker",
   components: {
-    vSelect
+    vSelect,
+    SelectOption
   },
   props: {
     options: Array

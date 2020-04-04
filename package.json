@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "currency-flags": "^2.1.1",
     "vue": "^2.6.11",
     "vue-select": "^3.9.5"
   },
