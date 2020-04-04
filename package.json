@@ -4,7 +4,7 @@
   "description": "Reusable currency-select dropdown component built in Vue, based on transferwise/tw-currency-select",
   "repository": "https://github.com/andytan0727/vue-currency-select",
   "private": false,
-  "main": "./src/index.js",
+  "main": "dist/vue-currency-select.umd.js",
   "author": {
     "email": "andytan0727@gmail.com",
     "name": "Andy Tan",
@@ -13,8 +13,9 @@
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build": "npm run build:bundle",
+    "build:bundle": "vue-cli-service build --target lib --name vue-currency-select --inline-vue ./src/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -37,7 +38,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "files": [
-    "src",
-    "dist"
+    "dist/*",
+    "src/*"
   ]
 }
