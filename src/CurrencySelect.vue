@@ -1,40 +1,64 @@
 <template>
-  <div id="app">
-    <select-picker-label :picker-label="pickerLabel">
-      <select-picker :options="options"></select-picker>
-    </select-picker-label>
+  <div class="currency-select-root">
+    <template v-if="label">
+      <label class="select-label">{{ label }}</label>
+    </template>
+    <select-picker
+      :options="options"
+      v-model="currency"
+      :selected-option-id="selectedOptionId"
+    ></select-picker>
   </div>
 </template>
 
 <script>
 import SelectPicker from "@components/SelectPicker";
-import SelectPickerLabel from "@components/SelectPickerLabel";
 import { generateCurrencyCountryMap } from "@/utils/currencyCountryMap";
 import "./styles/global.scss";
 
 export default {
   name: "CurrencySelect",
   components: {
-    SelectPicker,
-    SelectPickerLabel
+    SelectPicker
   },
   props: {
-    pickerLabel: String,
+    label: String,
     options: {
       type: Array,
       default: generateCurrencyCountryMap
+    },
+    value: String,
+
+    // selectedOptionId is added for vanilla JS
+    // compatibility. It allows selected value to be
+    // obtained by using vanilla JS (or JQuery)
+    selectedOptionId: String
+  },
+  computed: {
+    currency: {
+      get() {
+        return this.value;
+      },
+      set(value) {
+        this.$emit("input", value);
+      }
     }
   }
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped lang="scss">
+@import "./styles/variables";
+
+.currency-select-root {
+  width: $vs-dropdown-min-width;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .select-label {
+    font-size: 14px;
+    margin-bottom: 6.5px;
+  }
 }
 </style>

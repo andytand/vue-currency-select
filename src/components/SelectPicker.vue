@@ -1,11 +1,17 @@
 <template>
-  <v-select class="v-select-custom-styles" label="currency" :options="options">
+  <v-select
+    v-model="selectedCurrency"
+    class="v-select-custom-styles"
+    label="currency"
+    :options="options"
+    :reduce="option => option.currency"
+  >
     <template #option="{ currency }">
       <select-option :currency="currency" />
     </template>
 
     <template #selected-option="{ currency }">
-      <select-option :currency="currency" />
+      <select-option :id="selectedOptionId" :currency="currency" />
     </template>
 
     <template #no-options>
@@ -25,7 +31,19 @@ export default {
     SelectOption
   },
   props: {
-    options: Array
+    value: String,
+    options: Array,
+    selectedOptionId: String
+  },
+  computed: {
+    selectedCurrency: {
+      get() {
+        return this.value;
+      },
+      set(value) {
+        this.$emit("input", value);
+      }
+    }
   }
 };
 </script>
