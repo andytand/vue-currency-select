@@ -17,7 +17,7 @@ import { generateCurrencyCountryMap } from "@/utils/currencyCountryMap";
 import "./styles/global.scss";
 
 export default {
-  name: "CurrencySelect",
+  name: "vCurrencySelect",
   components: {
     SelectPicker
   },

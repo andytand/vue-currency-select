@@ -1,10 +1,10 @@
-import CurrencySelect from "./CurrencySelect";
+import vCurrencySelect from "./CurrencySelect";
 
 export default {
   install(Vue) {
     // register component globally
-    Vue.component("currency-select", CurrencySelect);
+    Vue.component("v-currency-select", vCurrencySelect);
   }
 };
 
-export { CurrencySelect };
+export { vCurrencySelect };
