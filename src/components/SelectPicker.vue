@@ -1,5 +1,9 @@
 <template>
-  <v-select label="currency" :options="options"></v-select>
+  <v-select
+    class="v-select-custom-styles"
+    label="currency"
+    :options="options"
+  ></v-select>
 </template>
 
 <script>
@@ -16,4 +20,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss">
+@import "../styles/variables";
+
+.v-select-custom-styles {
+  width: $vs-dropdown-min-width;
+
+  .vs__dropdown-option {
+    padding: 10px 15px;
+  }
+}
+</style>
