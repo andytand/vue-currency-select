@@ -1,7 +1,7 @@
 <template>
-  <div class="currency-select-root">
+  <div class="vcs-root">
     <template v-if="label">
-      <label class="select-label">{{ label }}</label>
+      <label class="vcs-select-label">{{ label }}</label>
     </template>
     <select-picker
       :options="options"
@@ -47,16 +47,16 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./styles/variables";
 
-.currency-select-root {
+.vcs-root {
   width: $vs-dropdown-min-width;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  .select-label {
+  .vcs-select-label {
     font-size: 14px;
     margin-bottom: 6.5px;
   }
