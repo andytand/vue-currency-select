@@ -136,6 +136,8 @@ which is sufficient for most use case.
 ## Local development setup
 To develop vue-currency-select, run the following commands:
 
+**This project assume you installed [Vue CLI](https://cli.vuejs.org/guide/).**
+
 > Please note that vue-currency-select uses the following version of `npm` & `node`:  
 >- `npm` >= 6.13.4
 >- `node` >= 12.16.1
@@ -148,9 +150,9 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run serve ./src/CurrencySelect.vue
 # or
-yarn serve
+yarn serve ./src/CurrencySelect.vue
 ```
 
 ### Compiles and minifies for production
@@ -166,9 +168,6 @@ npm run lint
 # or
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Packages
 The main `npm` packages used in this project are the following:

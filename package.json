@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue serve",
     "lint": "vue-cli-service lint",
     "build": "npm run build:bundle",
     "build:bundle": "vue-cli-service build --target lib --name vue-currency-select --inline-vue ./src/index.js"
