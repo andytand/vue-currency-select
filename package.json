@@ -1,6 +1,6 @@
 {
   "name": "vue-currency-select",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Reusable currency-select dropdown component built in Vue, based on transferwise/tw-currency-select",
   "repository": "https://github.com/andytan0727/vue-currency-select",
   "private": false,
