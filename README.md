@@ -54,6 +54,7 @@ optional props that you can use to customize more of its behavior, like `v-model
 |   `options`  | `Array`  | Options array for `<v-select />`. If not provided, vue-currency-select will use its default options with 43 countries currency | [{ currency: 'MYR', country: 'MY' }, ...] |
 |   `value`    | `String` | Value of selected currency. To be used with `v-model` | 'MYR' |
 | `selected-option-id` | `String` | HTML `id` attr for selected option input. Most likely you won't use it, this prop exists just to be compatible with vanilla js project, so you can use DOM operation to directly query selected option | 'option-id' |
+  `show-deselect-btn`  | `Boolean`| Show or hide deselect button (the button showed on the right side of selected item). Default to `false` |
 
 ## Example
 With `vue`, default `options` and `v-model` two-way data binding (recommended)

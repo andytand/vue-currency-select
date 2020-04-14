@@ -7,6 +7,7 @@
       :options="options"
       v-model="currency"
       :selected-option-id="selectedOptionId"
+      :show-deselect-btn="showDeselectBtn"
     ></select-picker>
   </div>
 </template>
@@ -32,7 +33,11 @@ export default {
     // selectedOptionId is added for vanilla JS
     // compatibility. It allows selected value to be
     // obtained by using vanilla JS (or JQuery)
-    selectedOptionId: String
+    selectedOptionId: String,
+    showDeselectBtn: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     currency: {

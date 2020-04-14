@@ -5,6 +5,7 @@
     label="currency"
     :options="options"
     :reduce="option => option.currency"
+    :components="!showDeselectBtn ? { Deselect } : null"
   >
     <template #option="{ currency }">
       <select-option :currency="currency" />
@@ -33,7 +34,15 @@ export default {
   props: {
     value: String,
     options: Array,
-    selectedOptionId: String
+    selectedOptionId: String,
+    showDeselectBtn: Boolean
+  },
+  data() {
+    return {
+      Deselect: {
+        render: h => h("span", "")
+      }
+    };
   },
   computed: {
     selectedCurrency: {
